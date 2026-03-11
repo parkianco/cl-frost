@@ -34,7 +34,7 @@ Schnorr (BIP340 compatible). Zero external dependencies."
      (:file "schnorr")
      (:file "keygen")
      (:file "signing")
-     (:file "frost"))))
+     )))
   :in-order-to ((test-op (test-op #:cl-frost/test))))
 
 (asdf:defsystem #:cl-frost/test
