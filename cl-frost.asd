@@ -15,7 +15,7 @@
 (asdf:defsystem #:cl-frost
   :name "cl-frost"
   :version "1.0.0"
-  :author "CLPIC Authors"
+  :author "Parkian Company LLC"
   :license "MIT"
   :description "FROST Threshold Schnorr Signatures (IETF draft-irtf-cfrg-frost-15)"
   :long-description "Standalone implementation of FROST threshold signature scheme
