@@ -1,3 +1,6 @@
+;;;; Copyright (c) 2024-2026 Parkian Company LLC. All rights reserved.
+;;;; SPDX-License-Identifier: BSD-3-Clause
+
 ;;;; signing.lisp - FROST Signing Protocol for cl-frost
 ;;;;
 ;;;; Implements the 2-round FROST signing protocol:
