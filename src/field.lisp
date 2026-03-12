@@ -19,29 +19,21 @@
 
 ;; Field modulus p = 2^256 - 2^32 - 977
 (defconstant +secp256k1-p+
-  (if (boundp '+secp256k1-p+)
-      (symbol-value '+secp256k1-p+)
-      #xFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFEFFFFFC2F)
+  #xFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFEFFFFFC2F
   "secp256k1 field modulus p.")
 
 ;; Group order n
 (defconstant +secp256k1-n+
-  (if (boundp '+secp256k1-n+)
-      (symbol-value '+secp256k1-n+)
-      #xFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFEBAAEDCE6AF48A03BBFD25E8CD0364141)
+  #xFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFEBAAEDCE6AF48A03BBFD25E8CD0364141
   "secp256k1 group order n.")
 
 ;; Generator point G coordinates
 (defconstant +secp256k1-gx+
-  (if (boundp '+secp256k1-gx+)
-      (symbol-value '+secp256k1-gx+)
-      #x79BE667EF9DCBBAC55A06295CE870B07029BFCDB2DCE28D959F2815B16F81798)
+  #x79BE667EF9DCBBAC55A06295CE870B07029BFCDB2DCE28D959F2815B16F81798
   "secp256k1 generator x-coordinate.")
 
 (defconstant +secp256k1-gy+
-  (if (boundp '+secp256k1-gy+)
-      (symbol-value '+secp256k1-gy+)
-      #x483ADA7726A3C4655DA4FBFC0E1108A8FD17B448A68554199C47D08FFB10D4B8)
+  #x483ADA7726A3C4655DA4FBFC0E1108A8FD17B448A68554199C47D08FFB10D4B8
   "secp256k1 generator y-coordinate.")
 
 ;;;; ============================================================================
