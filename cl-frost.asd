@@ -48,4 +48,6 @@ Schnorr (BIP340 compatible). Zero external dependencies."
     :components
     ((:file "test-frost"))))
   :perform (test-op (op c)
-             (uiop:symbol-call :cl-frost.test :run-all-tests)))
+             (let ((result (uiop:symbol-call :cl-frost.test :run-all-tests)))
+               (unless result
+                 (error "Tests failed")))))
