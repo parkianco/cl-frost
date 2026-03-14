@@ -1,3 +1,6 @@
+;; Copyright (c) 2024-2026 Parkian Company LLC. All rights reserved.
+;; SPDX-License-Identifier: BSD-3-Clause
+
 ;;;; cl-frost.asd - FROST Threshold Schnorr Signatures
 ;;;;
 ;;;; FROST (Flexible Round-Optimized Schnorr Threshold) signature scheme
@@ -14,7 +17,7 @@
 
 (asdf:defsystem #:cl-frost
   :name "cl-frost"
-  :version "1.0.0"
+  :version "0.1.0"
   :author "Parkian Company LLC"
   :license "MIT"
   :description "FROST Threshold Schnorr Signatures (IETF draft-irtf-cfrg-frost-15)"
@@ -35,11 +38,11 @@ Schnorr (BIP340 compatible). Zero external dependencies."
      (:file "keygen")
      (:file "signing")
      )))
-  :in-order-to ((test-op (test-op #:cl-frost/test))))
+  :in-order-to ((asdf:test-op (test-op #:cl-frost/test))))
 
 (asdf:defsystem #:cl-frost/test
   :name "cl-frost-test"
-  :version "1.0.0"
+  :version "0.1.0"
   :description "Tests for cl-frost"
   :depends-on (#:cl-frost)
   :serial t
@@ -47,7 +50,7 @@ Schnorr (BIP340 compatible). Zero external dependencies."
   ((:module "test"
     :components
     ((:file "test-frost"))))
-  :perform (test-op (op c)
+  :perform (asdf:test-op (op c)
              (let ((result (uiop:symbol-call :cl-frost.test :run-all-tests)))
                (unless result
                  (error "Tests failed")))))
